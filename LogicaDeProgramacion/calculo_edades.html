@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Edades</h3>
+    <script>
+
+        function saltarLinea() {
+            document.write('<br>');
+        }
+
+        function calcularDiferenciaEdad(edad_mia, otra_edad) {
+            saltarLinea();
+            let calculoEdad = edad_mia - otra_edad;
+            document.write('Mi edad es de '+edad_mia+' años y la de mi hermana es '+otra_edad+
+            ' años, la diferencia de nuestras edades es de '+calculoEdad+' años')
+        }
+
+        calcularDiferenciaEdad(25,16);
+    </script>
+</body>
+
+</html>

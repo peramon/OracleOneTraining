@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>HTML</p>
+    <p>Estoy definiendo la edad de Paul</p>
+
+    <p>Paul nacio en 1998 <br>
+        David nacio en 2000 <br>
+        Diana nacio en 2000</p>
+    <P>JS</P>
+    <script>
+        let anio = 2023;
+        document.write('La edad de Paul es ...');
+        document.write('<br>');
+        document.write('25');
+        document.write('<br>');
+        document.write('El año de nacimiento de Paul es...');
+        document.write('<br>');
+        document.write('1998');
+        document.write('<br>');
+        document.write('El promedio de edades de Paul, David y Diana es...<br>' + (25 + 22 + 22) / 3);
+        document.write('<br>Paul tiene ' + (anio - 1998) + ' años' + '<br>David tiene ' + (anio - 2000) + ' años' + '<br>Diana tiene ' + (anio - 2000) + ' años<br>');
+        anio = 2024;
+
+        document.write('<br>Aumento de 1 al año');
+        document.write('<br>Paul tiene ' + (anio - 1998) + ' años' + '<br>David tiene ' + (anio - 2000) + ' años' + '<br>Diana tiene ' + (anio - 2000) + ' años');
+        document.write('<br><br>Variables<br><br>');
+        document.write('Jimena tiene: ' + (anio - 2009) + ' años<br>');
+        document.write('Paola tiene: ' + (anio - 2007) + ' años<br>');
+        document.write('Laura tiene: ' + (anio - 2006) + ' años<br>');
+
+        let edadJimena = 15;
+        let edadPaola = 17;
+        let edadLaura = 18;
+        let nombre1 = 'Jimena';
+        let nombre2 = 'Paola';
+        let nombre3 = 'Laura';
+        let promedio = (edadJimena + edadPaola + edadLaura) / 3
+        document.write('El promedio de edades de ' + nombre1 + ', ' + nombre2 + ' y ' + nombre3 + ', es de ' + Math.round(promedio) + ' años<br>');
+
+        document.write('<br>La tabla del 8<br>');
+        let numero = 8;
+        let salto = '<br>';
+
+        document.write(+numero+" por 1 es " + numero * 1 + salto);
+        document.write(+numero+" por 2 es " + numero* 2 + salto);
+        document.write(+numero+" por 3 es " + numero * 3 + salto);
+        document.write(+numero+" por 4 es " + numero * 4 + salto);
+        document.write(+numero+" por 5 es " + numero * 5 + salto);
+        document.write(+numero+" por 6 es " + numero * 6 + salto);
+        document.write(+numero+" por 7 es " + numero * 7 + salto);
+        document.write(+numero+" por 8 es " + numero * 8 + salto);
+        document.write(+numero+" por 9 es " + numero * 9 + salto);
+        document.write(+numero+" por 10 es " + numero * 10 + salto);
+
+
+    </script>
+</body>
+
+</html>
