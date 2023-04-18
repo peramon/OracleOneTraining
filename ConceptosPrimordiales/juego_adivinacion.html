@@ -20,14 +20,26 @@
             saltarLinea();
         }
 
-        let numePensado = Math.round(Math.random()*10);
-        let numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'));
+        let numePensado = Math.round(Math.random() * 10);
+        let intentos = 3;
+        let perdio = false;
 
-        if(numePensado == numeroLanzado){
-            imprimirMensaje('Usted acerto');
-        }else{
-            imprimirMensaje('Usted perdió el número era ' + numePensado);
+        while (intentos > 0) {
+            let numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'));
+            if (numePensado == numeroLanzado) {
+                imprimirMensaje('Usted acerto, en el intento ' + intentos + ', el numero ' + numeroLanzado);
+                break;
+            } else {
+                imprimirMensaje('Usted perdió');
+                perdio = true;
+            }
+            intentos--;
         }
+
+        if(perdio){
+            imprimirMensaje('Usted perdió, el número era '+numePensado);
+        }
+
 
     </script>
 </body>
