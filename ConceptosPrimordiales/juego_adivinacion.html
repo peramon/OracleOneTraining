@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Juego adivinación</h3>
+    <script>
+        function saltarLinea() {
+            document.write('<br><br>');
+        }
+
+        function imprimirMensaje(mensaje) {
+            document.write(mensaje);
+            saltarLinea();
+        }
+
+        let numePensado = Math.round(Math.random()*10);
+        let numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'));
+
+        if(numePensado == numeroLanzado){
+            imprimirMensaje('Usted acerto');
+        }else{
+            imprimirMensaje('Usted perdió el número era ' + numePensado);
+        }
+
+    </script>
+</body>
+
+</html>
