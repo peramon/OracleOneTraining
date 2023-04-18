@@ -18,15 +18,15 @@
             saltarLinea();
         }
 
-        function calcularImc(nombre, peso, altura){
-            imcPersona = peso / (altura*altura);
-            imprimirMensaje('El IMC de ' +nombre+ ' es '+ Math.round(imcPersona)); 
+        function calcularImc( peso, altura){
+             let imcPersona = peso / (altura*altura);
+             return imcPersona;
         }
 
         let alturaPaul = 1.70;
         let pesoPaul = 92;
         let imcPaul = pesoPaul / (alturaPaul*alturaPaul)
-        // imprimirMensaje('Calculo del IMC');
+        //  imprimirMensaje('Calculo del IMC');
         imprimirMensaje('El IMC de Paul es '+ Math.round(imcPaul)); 
 
         let alturaDavid = 1.69;
@@ -34,7 +34,19 @@
         let imcDavid = pesoDavid / (alturaDavid*alturaDavid)
         imprimirMensaje('El IMC de David es '+ Math.round(imcDavid)); 
 
-        calcularImc('Viviana',60,1.50);
+        // calcularImc('Viviana',60,1.50);
+        let imcPaulR = calcularImc(94,1.70);
+        let imcDavidJ = calcularImc(94,1.70);
+
+        imprimirMensaje('El promedio del imc calculado de Paul y David es: ' + (imcPaulR+imcDavidJ)/2)
+
+        let nombreInformado = prompt('Ingrese su nombre')
+        let pesoInformado =prompt(nombreInformado+' ingrese el peso');
+        let alturaInformado=prompt(nombreInformado+ ' ingrese la altura');
+
+        let imcCalculado = calcularImc(pesoInformado,alturaInformado);
+        imprimirMensaje('El imc de'+nombreInformado+' calculado es: '+imcCalculado);
+
     </script>
 </body>
 </html>
