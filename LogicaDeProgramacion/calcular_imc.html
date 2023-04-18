@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calcular IMC</h3>
+    <script>
+        function saltarLinea() {
+            document.write('<br><br>');
+        }
+
+        function imprimirMensaje(mensaje) {
+            document.write(mensaje);
+            saltarLinea();
+        }
+
+        function calcularImc(nombre, peso, altura){
+            imcPersona = peso / (altura*altura);
+            imprimirMensaje('El IMC de ' +nombre+ ' es '+ Math.round(imcPersona)); 
+        }
+
+        let alturaPaul = 1.70;
+        let pesoPaul = 92;
+        let imcPaul = pesoPaul / (alturaPaul*alturaPaul)
+        // imprimirMensaje('Calculo del IMC');
+        imprimirMensaje('El IMC de Paul es '+ Math.round(imcPaul)); 
+
+        let alturaDavid = 1.69;
+        let pesoDavid = 78;
+        let imcDavid = pesoDavid / (alturaDavid*alturaDavid)
+        imprimirMensaje('El IMC de David es '+ Math.round(imcDavid)); 
+
+        calcularImc('Viviana',60,1.50);
+    </script>
+</body>
+</html>
