@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>TClacular edades media de una familia</h3>
+    <script>
+         function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    imprimir('---------------------------------- ----------------------------------');
+    saltarLinea();
+
+    let edadMadre = 42;
+    let edadesPadre = 44;
+    let edadHijo = 20;
+    let edadHija = 15;
+
+    let totalEdad = edadMadre + edadesPadre + edadHijo + edadHija;
+
+    let mediaEdad = Math.round(totalEdad/4);
+
+    imprimir(' La media de las edades es: '+ mediaEdad)
+
+    saltarLinea();
+    imprimir('----------------------------------WHILE----------------------------------');
+    saltarLinea();
+
+    let numeroMiembros = parseInt(prompt('Ingrese la cantidad de miembros de su familia'));
+    let contador = 1;
+    let totalEdadesMiembros = 0;
+    while(contador <= numeroMiembros){
+        let edad = parseInt(prompt('Ingrese la edad del familiar'));
+        totalEdadesMiembros += edad;
+        contador++;
+    }
+    mediaEdad = Math.round(totalEdadesMiembros/numeroMiembros);
+    imprimir(' La suma de edades de los miembros es: ' + totalEdadesMiembros)
+    imprimir(' La media de las edades es: '+ mediaEdad)
+    saltarLinea();
+    imprimir('---------------------------------- ----------------------------------');
+
+ 
+    </script>
+</body>
+</html>
