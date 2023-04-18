@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calcular IMC</h3>
+    <script>
+        function saltarLinea() {
+            document.write('<br><br>');
+        }
+
+        function imprimirMensaje(mensaje) {
+            document.write(mensaje);
+            saltarLinea();
+        }
+
+        function calcularImc( peso, altura){
+             let imcPersona = peso / (altura*altura);
+             return Math.round(imcPersona);
+        }
+
+        let alturaPaul = 1.70;
+        let pesoPaul = 92;
+        let imcPaul = pesoPaul / (alturaPaul*alturaPaul)
+        //  imprimirMensaje('Calculo del IMC');
+        imprimirMensaje('El IMC de Paul es '+ Math.round(imcPaul)); 
+
+        let alturaDavid = 1.69;
+        let pesoDavid = 78;
+        let imcDavid = pesoDavid / (alturaDavid*alturaDavid)
+        imprimirMensaje('El IMC de David es '+ Math.round(imcDavid)); 
+
+        // calcularImc('Viviana',60,1.50);
+        let imcPaulR = calcularImc(94,1.70);
+        let imcDavidJ = calcularImc(94,1.70);
+
+        imprimirMensaje('El promedio del imc calculado de Paul y David es: ' + Math.round(imcPaulR+imcDavidJ)/2)
+
+        // Ingreso de valores
+        let nombreInformado = prompt('Ingrese su nombre')
+        let pesoInformado =prompt(nombreInformado+' ingrese el peso');
+        let alturaInformado=prompt(nombreInformado+ ' ingrese la altura');
+
+        let imcCalculado = calcularImc(pesoInformado,alturaInformado);
+        imprimirMensaje('El imc de'+nombreInformado+' calculado es: '+imcCalculado);
+
+        if(imcCalculado < 18.5){
+            imprimirMensaje('IMC abajo de lo recomendado');
+        }
+
+        if(imcCalculado >= 18.5 && imcCalculado < 25){
+            imprimirMensaje('IMC dentro del intervalo normal');
+        }
+
+        if(imcCalculado >= 25){
+            imprimirMensaje('IMC considerado con sobrepeso');
+        }
+
+    </script>
+</body>
+</html>
