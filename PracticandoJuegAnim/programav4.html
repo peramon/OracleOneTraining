@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa</title>
+</head>
+
+<body>
+    <!-- <canvas width="600" height="400" onclick="exibirAlerta()"></canvas> -->
+    <canvas width="600" height="400"></canvas>
+    <script>
+
+        let pantalla = document.querySelector('canvas');
+        let pincel = pantalla.getContext('2d');
+        pincel.fillStyle = 'lightgrey'; // Propiedad
+        pincel.fillRect(0, 0, 600, 400); // funcion
+
+        function disenharCircunferencia(x, y, radio) {
+            pincel.fillStyle = 'blue';
+            pincel.beginPath();
+            pincel.arc(x, y, radio, 0, 2 * Math.PI);
+            pincel.fill();
+        }
+
+        function limpiarPantalla() {
+            pincel.clearRect(0, 0, 600, 400);
+        }
+
+        let x = 0;
+
+        function actualizarPantalla(){
+            limpiarPantalla();
+            disenharCircunferencia(x,20,10);
+            x++;
+        }
+
+        // for (let i = 20; i < 600; i++) {
+        //     // pincel.clearRect(0,0,600,400);
+        //     disenharCircunferencia(i,20,10);
+        // }
+
+        setInterval(actualizarPantalla, 25);
+
+    </script>
+</body>
+
+</html>
