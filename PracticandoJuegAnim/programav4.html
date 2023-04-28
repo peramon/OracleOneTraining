@@ -29,12 +29,22 @@
             pincel.clearRect(0, 0, 600, 400);
         }
 
-        let x = 0;
+        let x = 5;
+        let x2 = 600;
 
-        function actualizarPantalla(){
+        function actualizarPantalla() {
             limpiarPantalla();
-            disenharCircunferencia(x,20,10);
-            x++;
+            if (x <= 600) {
+                disenharCircunferencia(x, 20, 10);
+                x++;
+            } else {
+                disenharCircunferencia(x2, 20, 10);
+                x2--;
+                if(x2 == 0){
+                    x = 5;
+                    x2 = 600;
+                }
+            }
         }
 
         // for (let i = 20; i < 600; i++) {
@@ -42,7 +52,7 @@
         //     disenharCircunferencia(i,20,10);
         // }
 
-        setInterval(actualizarPantalla, 25);
+        setInterval(actualizarPantalla, 2);
 
     </script>
 </body>
