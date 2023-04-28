@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa</title>
+</head>
+
+<body>
+    <!-- <canvas width="600" height="400" onclick="exibirAlerta()"></canvas> -->
+    <h3>Juego de tiro al blanco</h3>
+    <canvas width="600" height="400"></canvas>
+    <h4 id="puntaje">Score: </h4>
+    <button>Reiniciar</button>
+    <script>
+
+        let pantalla = document.querySelector('canvas');
+        let pincel = pantalla.getContext('2d');
+
+        let radio = 10;
+        let xAleatorio;
+        let yAleatorio;
+
+        function disenharCircunferencia(x, y, radio, color) {
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, radio, 0, 2 * Math.PI);
+            pincel.fill();
+        }
+
+        function limpiarPantalla() {
+            pincel.clearRect(0, 0, 600, 400);
+        }
+
+        function actualizarPantalla() {
+            limpiarPantalla();
+            pincel.fillStyle = 'lightgrey'; // Propiedad
+            pincel.fillRect(50, 50, 700, 500); // funcion
+            xAleatorio = sortearPosicion(550);
+            yAleatorio = sortearPosicion(350);
+
+            diseniarObjetivo(xAleatorio, yAleatorio);
+
+        }
+
+        function diseniarObjetivo(x, y) {
+            disenharCircunferencia(x, y, radio + 20, 'red');
+            disenharCircunferencia(x, y, radio + 10, 'white');
+            disenharCircunferencia(x, y, radio, 'red');
+        }
+
+        function sortearPosicion(maximo) {
+            let posicion_random =  Math.floor(Math.random() * maximo);
+            if(posicion_random < 50){
+                posicion_random = 50;
+            }
+            return posicion_random;
+        }
+
+        setInterval(actualizarPantalla, 1100);
+        let puntaje = document.getElementById('puntaje') ; 
+
+        let conteo_puntaje = 1;
+        function disparar(evento) {
+            let x = evento.pageX - pantalla.offsetLeft;
+            let y = evento.pageY - pantalla.offsetTop;
+            if ((x < xAleatorio + radio) &&
+                (x > xAleatorio - radio) &&
+                (y < yAleatorio + radio) &&
+                (y > yAleatorio - radio)) {
+                // alert('Tiro certero');
+                puntaje.innerHTML = ('Score: ' + (conteo_puntaje));
+                conteo_puntaje++;
+            }
+
+
+        }
+        pantalla.onclick = disparar;
+
+        function saltarEspacio(){
+            document.write('<br><br>')
+        }
+
+
+
+        function reiniciarJuego(){
+            location.reload();
+        }
+
+        let reiniciar = document.querySelector('button');
+
+        reiniciar.onclick = reiniciarJuego;
+    
+    </script>
+</body>
+
+</html>
