@@ -1,0 +1,15 @@
+body {
+    background: #CCCCCC;
+}
+
+p{ /* Selectores de Css */
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p em strong{
+    color: red;
+}
