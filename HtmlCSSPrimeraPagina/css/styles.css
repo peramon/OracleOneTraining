@@ -1,19 +1,49 @@
-body {
-    background: #CCCCCC;
+.titulo-prin{
+    padding-left: 30px;
 }
 
-p{ /* Selectores de Css */
-    text-align: center;
+#banner {
+  width: 100%;
 }
 
-h1 {
-    text-align: center;
+.principal {
+  background: #cccccc;
+  padding: 20px;
 }
 
-p em strong{
-    color: red;
+.titulo-cen {
+  text-align: center;
 }
 
-#mision{
-    font-size: 20px;
+p {
+  /* Selectores de Css */
+  text-align: center;
+}
+
+p em strong {
+  color: red;
+}
+
+#mision {
+  font-size: 20px;
+}
+
+.diferenciales {
+  background: white;
+  padding: 20px;
+}
+
+.items {
+  font-style: italic;
+}
+
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  margin-right: 15%;
+}
+
+.img-diferencial {
+  width: 50%;
 }
