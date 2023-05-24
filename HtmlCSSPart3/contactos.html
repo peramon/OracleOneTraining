@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="caja">
@@ -21,10 +23,24 @@
             </nav>
         </div>
     </header>
+    <main>
+        <form action="">
+            <label for="nombre-apellido">Nombre y  Apellido: </label>
+            <input type="text" placeholder="Ingrese su nombre completo" id="nombre-apellido">
 
+            <label for="correo">Correo:</label>
+            <input type="email" placeholder="Ingrese su email" id="correo">
+
+            <label for="telefono">Número celular:</label>
+            <input type="text" placeholder="Ingrese su numero" id="telefono">
+            
+            <input type="submit" value="Enviar formulario">
+        </form>
+    </main>
     <footer>
         <img src="img/logo-blanco.png" alt="">
         <p class="copyright">&#169; Copyright Barbería Alura - 2023</p>
     </footer>
 </body>
+
 </html>
