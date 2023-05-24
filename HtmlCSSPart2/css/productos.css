@@ -28,6 +28,11 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: crimson;
+  text-decoration: underline;
+}
+
 /* Agregando Productos */
 .productos {
   width: 940px;
@@ -54,9 +59,22 @@ nav a {
 
 }
 
+.productos li:hover {
+  border-color: crimson;
+  font-size: 33px;
+}
+
+.productos li:active {
+  border-color: chartreuse;
+}
+
 .productos h2 {
   font-size: 30px;
   font-weight: bold;
+}
+
+.productos li:hover h2 {
+  font-size: 33px;
 }
 
 .producto-descripcion {
