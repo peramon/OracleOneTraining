@@ -4,16 +4,15 @@ header {
 }
 
 .caja {
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
+  width: 940px;
+  position: relative;
+  margin: 0 auto;
 }
 
 nav {
-    position: absolute;
-    top: 110px;
-    right: 0;
-
+  position: absolute;
+  top: 110px;
+  right: 0;
 }
 
 nav li {
@@ -27,4 +26,45 @@ nav a {
   font-weight: bold;
   font-size: 22px;
   text-decoration: none;
+}
+
+/* Agregando Productos */
+.productos {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.productos li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  /*   background-color: #CCCCCC; */
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  /* border-color: black;
+  border-width: 2px;
+  border-style: solid; */
+  /* border-top-width: 15px;
+  border-top-color: yellow; */
+  border: 2px solid black;
+  border-radius: 10px;
+
+}
+
+.productos h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.producto-descripcion {
+  font-size: 18px;
+}
+
+.producto-precio {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
 }
