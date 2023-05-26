@@ -56,7 +56,6 @@ nav a:hover {
   border-top-color: yellow; */
   border: 2px solid black;
   border-radius: 10px;
-
 }
 
 .productos li:hover {
@@ -102,14 +101,15 @@ footer {
 /* Page de contactos */
 main {
   width: 940px;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 
 form {
   margin: 40px 0;
 }
 
-form label, form legend {
+form label,
+form legend {
   display: block;
   font-size: 20px;
   margin: 0 0 10px;
@@ -135,13 +135,13 @@ form label, form legend {
   background-color: orange;
   border: none;
   border-radius: 5px;
-  transition: 1s background;
+  /*   transition: 1s background; */
+  transition: 1s all;
   cursor: pointer;
 }
 
 .enviar:hover {
   background-color: darkorange;
+  /* transform: scale(1.05) rotate(5deg) ; */
+  transform: scale(1.05);
 }
-
-
-
