@@ -145,3 +145,19 @@ form legend {
   /* transform: scale(1.05) rotate(5deg) ; */
   transform: scale(1.05);
 }
+
+/* Tabla de horarios */
+table {
+  margin: 40px;
+}
+
+thead {
+  background: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+td, th{
+  border: 1px solid black;
+  padding: 10px;
+}
