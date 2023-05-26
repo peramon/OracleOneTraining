@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="caja">
-            <h1><img src="img/logo.png" alt=""></h1>
+            <h1><img src="img/logo.png" alt="Logo de la barberia Alura"></h1>
             <nav>
                 <ul>
                     <li><a href="index.html" target="_blank">Home</a></li>
@@ -36,8 +36,8 @@
 
             <label for="mensaje">Mensaje</label>
             <textarea cols="70" rows="10" id="mensaje" placeholder="Ingrese el mensaje" class="input-padre" required></textarea>
-            <div>
-                <p>¿Cómo le gustaría que lo contactemos?</p>
+            <fieldset>
+                <legend>¿Cómo le gustaría que lo contactemos?</legend>
                 <label for="radio-email"><input type="radio" name="contacto" value="email"
                         id="radio-email">Email</label>
 
@@ -46,15 +46,15 @@
 
                 <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp"
                         id="radio-whatsapp" checked>WhastApp</label>
-            </div>
-            <div>
-                <p>¿En cuál horario prefiere ser atendido?</p>
+            </fieldset>
+            <fieldset>
+                <legend>¿En cuál horario prefiere ser atendido?</legend>
                 <select name="" id="">
                     <option value="">Mañana</option>
                     <option value="">Tarde</option>
                     <option value="">Noche</option>
                 </select>
-            </div>
+            </fieldset>
             <label for="" class="checkbox"><input type="checkbox" checked> Le gustaría recibir novedades de la barbería
                 Alura</label>
 
