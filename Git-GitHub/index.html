@@ -59,7 +59,13 @@
     git restore --staged "nombre del archivo" -> Elimina el estado de add y mantiene el contenido.
     git revert "id del commit" -> Revertir un commit.
 
+    git checkout "has del commit" -> Entra en un estado desanexado con un commit anterior que especifiques
     
+    git diff -> Permite ver los cambios que se han hecho sino se han agregado todavia
+    git diff "has del commit".."has del commit" -> Compara dos commits para ver los cambios que se han hecho
+
+    git tag -a "tag version" -m "Commit corto" -> Se crea una version de la aplicacion
+    git push origin main "tag version" -> Se envia el tag de la version al repositorio
 
 
 -->
